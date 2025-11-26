@@ -1,0 +1,34 @@
+### Bluetooth_Fix
+# Precaution
+!! first use reload cmd and check then only use remove cmd  if reload doesn't work
+$ sudo modprobe btusb
+$ sudo rmmod btusb
+
+
+$ sudo rmmod btusb
+
+explanation:-
+rmmod stands for remove module.
+This removes/unloads the btusb driver from the kernel.
+
+$ sudo modprobe btusb
+
+explanation:-
+modprobe is used to load a kernel module.
+btusb is the Bluetooth USB driver module in Linux.
+So this command activates/loads the Bluetooth driver into the Linux kernel.
+
+$ sudo rmmod btusb
+$ sudo modprobe btusb
+This unloads and reloads the Bluetooth kernel module → fixing many Bluetooth problems.
+
+It works similar to “restart Bluetooth service” but at a deeper, kernel level.
+
+🚨 Important Notes
+
+Removing some modules can temporarily disable related hardware.
+Module removal may fail if something is using it (you’ll get an error like “Module in use”).
+Use with care, because kernel modules interact directly with hardware.
+
+
+
