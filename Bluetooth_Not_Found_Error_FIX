@@ -1,0 +1,6 @@
+### Bluetooth_Fix
+
+run the below lines in terminal
+$ sudo modprobe btusb
+$ sudo rmmod btusb
+$ sudo systemctl start bluetooth.services 
